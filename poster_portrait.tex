@@ -1,0 +1,183 @@
+\documentclass[portrait,final,a1paper,fontscale=0.435]{baposter}
+
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{comment}
+\usepackage{rotating}
+\usepackage{bm}
+\usepackage{blindtext}
+\usepackage{caption}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{adjustbox}
+\usepackage{pgfplots}
+%\usepackage{times}
+%\usepackage{helvet}
+%\usepackage{bookman}
+%\usepackage{palatino}
+
+%\newcommand{\captionfont}{\footnotesize}
+
+\graphicspath{{images/}{../images/}}
+\usetikzlibrary{calc}
+
+% Multicol Settings
+\setlength{\columnsep}{1.5em}
+\setlength{\columnseprule}{0mm}
+
+% Save space in lists. Use this after the opening of the list
+\newcommand{\compresslist}{%
+\setlength{\itemsep}{1pt}%
+\setlength{\parskip}{0pt}%
+\setlength{\parsep}{0pt}%
+}
+
+\RequirePackage{lmodern}
+%\RequirePackage{fourier}
+
+
+
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\newcommand{\argmin}{\arg\,\!\min} 
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand*{\matr}[1]{\nielsbf{#1}}
+%\newcommand*{\tran}{{}^{\mkern-1.5mu\mathsf{\scalebox{0.55}{T}}}}
+\newcommand*{\tran}{{}^{\mkern-1.5mu\scalebox{0.55}{T}}}
+\newcommand*{\pinv}{{}^{\mkern-1.5mu\scalebox{0.55}{+}}}
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+\DeclareMathAlphabet      {\nielsf}{OT1}{cmr}{bx}{n}
+%\newcommand{\nielsbf}[1]{{\scalemath{1.12}{\nielsf#1}}}
+\newcommand{\nielsbf}[1]{{\scalemath{1.00}{\nielsf#1}}}
+%\newcommand{\nielsbf}[1]{{\boldsymbol{\scalemath{1.12}{\nielsf#1}}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+% Define some colors
+%\definecolor{lightblue}{rgb}{0.145,0.6666,1}
+%\definecolor{lightblue}{rgb}{0.527,0.85,1}
+%\definecolor{dblue}{rgb}{0,0,0.2}
+\definecolor{tublue}{rgb}{0,0.85,0.92}
+%\definecolor{tublue}{cmyk}{0.75,0.23,0,0}
+
+\background{
+{
+	\begin{tikzpicture}[overlay]%
+	\draw (current page.south west)+(-1.09cm,-.6cm) node[anchor=south west]
+	{ \includegraphics[width=25.25cm, trim=0 .66cm 0 0, clip]{TUDelft_border7.pdf} };
+	\end{tikzpicture}}
+}
+
+\hyphenation{resolution occlusions}
+%%
+\begin{poster}%
+  % Poster Options
+  {
+  grid=false,										% Show grid to help with alignment
+  colspacing=1em,					% Column spacing
+  bgColorOne=white,			% Color style
+  bgColorTwo=white,
+  borderColor=tublue,
+	headerColorOne=tublue,
+  headerColorTwo=tublue,
+  headerFontColor=white,
+  boxColorOne=white,
+  boxColorTwo=white,
+  textborder=roundedleft,		% Format of textbox
+  eyecatcher=true,						% Format of text header
+  headerborder=open,
+  headerheight=0.1\textheight,
+%  textfont=\sc, An example of changing the text font
+  headershape=roundedright,
+  headershade=plain,
+  headerfont=\Large\bf\textsc, %Sans Serif
+  textfont={\setlength{\parindent}{1.5em}},
+  boxshade=plain,
+%  background=shade-tb,
+  background=user,
+  linewidth=2pt
+  }
+  % Eye Catcher
+  { %\includegraphics[height=4.0em]{images/eilogo}
+	} 
+  % Title
+  {\bf\textsc{Propagation and scattering}\vspace{0.5em}}
+  % Authors
+  {\textsc{Joris Bentvelsen}}
+  % University logo
+  {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
+  %  \includegraphics[height=5.0em]{images/logo}
+  }
+	
+
+
+\headerbox{Description of the Problem}{name=1,column=0,row=0,span=3}{
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra at odio nec consectetur. Aliquam erat volutpat. Integer eu placerat lacus. Nulla nisi mi, laoreet ullamcorper molestie non, sodales consequat metus. Nulla eu mi mauris. Aenean scelerisque nulla non faucibus pulvinar. Ut quis ipsum metus. Pellentesque sit amet ex sit amet erat vehicula hendrerit. Nam tempor sodales nibh, ac eleifend lacus facilisis efficitur.
+
+Vestibulum arcu erat, ultricies sed facilisis commodo, pulvinar ac neque. Fusce a pulvinar ex. Etiam quis augue tincidunt, egestas justo in, ullamcorper dolor. Nulla vel tristique urna. Vivamus volutpat tortor et eros sollicitudin pretium. Sed congue imperdiet purus, id elementum purus euismod vel. In laoreet fermentum lobortis. Cras vulputate erat diam, at luctus nisl placerat vel. Quisque accumsan rhoncus scelerisque. Vestibulum ac ex non neque consectetur tincidunt. Praesent vel hendrerit erat. Aliquam tincidunt elit venenatis, pellentesque dolor nec, bibendum velit. Vivamus ac diam placerat, bibendum neque vitae, interdum quam. Nunc efficitur consequat dolor et vestibulum. 
+\hspace{0.03\textwidth}
+}
+
+
+\headerbox{Electromagnetic Derivations}{name=2,column=0,row=0,span=3,below=1}{
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt ex ac nisi commodo viverra. Nulla est libero, suscipit et sapien id, pharetra porttitor nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam nisl eros, ultricies a nisi ac, rutrum lobortis libero. Nam ac congue purus, vitae tempus nulla. Nullam tempor vestibulum imperdiet. Aenean eget risus convallis ipsum accumsan lobortis. Nunc imperdiet vehicula tortor at gravida. Sed placerat leo in magna aliquam, in finibus mauris porttitor.
+
+Cras tristique molestie imperdiet. Etiam fringilla sed neque eget luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin ac sem sit amet velit interdum dapibus. Nullam tempus maximus risus et placerat. Sed ut ullamcorper lorem, ac sagittis massa. Vivamus quis lectus urna. Aliquam in ullamcorper ante.
+
+Nunc efficitur molestie egestas. Integer ut nulla at dui mattis porta. Nullam egestas aliquet lacus a sagittis. Ut laoreet vitae nunc a viverra. Praesent viverra posuere justo nec convallis. Donec eget odio id lacus fermentum pulvinar sed ut leo. Sed id tellus ut sapien auctor rutrum nec a mauris. Etiam nulla massa, fermentum a risus et, tincidunt rutrum ex. Nullam nisl felis, fermentum suscipit orci mollis, posuere gravida velit. Integer a pellentesque dolor, non faucibus libero. Sed et aliquam turpis, id eleifend ipsum. Phasellus bibendum libero ut turpis posuere, vitae sodales tortor gravida. Sed nulla purus, sollicitudin aliquet condimentum non, ullamcorper sit amet ipsum. 
+
+}
+
+\headerbox{Analysis of the Problem}{name=3,column=0,row=0,span=3,below=2}{
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu sollicitudin leo. Suspendisse sodales malesuada turpis, sit amet semper nisl pulvinar ac. Proin tincidunt arcu in nibh convallis volutpat. Maecenas varius molestie augue, a facilisis justo. Quisque vitae mattis ante. Fusce porta neque facilisis magna consectetur, nec luctus mauris pulvinar. Integer quam mauris, sollicitudin sed fringilla feugiat, consequat ut est. Integer dapibus est ut magna dictum, sed scelerisque ligula sagittis. Integer risus est, varius vel ullamcorper at, congue ac sapien. Fusce ut erat suscipit, pretium risus eu, fermentum diam.
+
+Nunc euismod tempor nulla malesuada volutpat. Curabitur dictum turpis ipsum, in venenatis urna lobortis eu. Suspendisse ac ipsum urna. Phasellus fermentum non neque vitae efficitur. In tincidunt, ex eu posuere rhoncus, mauris est fermentum elit, ut gravida turpis orci mattis odio. Vivamus consectetur, arcu bibendum pulvinar semper, purus nulla tristique mauris, eget aliquam purus massa sit amet arcu. Donec eu sapien hendrerit, convallis ante quis, pharetra est. 
+
+\hspace{0.03\textwidth}
+\centering
+
+}
+
+
+
+
+\headerbox{References}{name=5,column=0,row=0,span=3,below=3}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{minipage}{.5\textwidth}
+% \includegraphics[scale = 0.04]{Figs/MetingBasicAanzicht.jpeg}
+% \end{minipage}
+%  \hspace{0.03cm}
+% \begin{minipage}{.5\textwidth}
+% % \hspace{-4.5cm}
+% \includegraphics[scale=.22]{Figs/SignalProcessing.eps}
+% \end{minipage}
+
+% \begin{minipage}{.5\textwidth}
+% \begin{figure}
+% \noindent
+
+
+\hspace{0.03\textwidth}
+\centering
+}
+
+
+
+
+
+
+
+
+
+\end{poster}
+\end{document}
